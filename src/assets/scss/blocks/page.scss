@@ -1,0 +1,17 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.page_title {
+  font-size: 2.1rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: $white;
+
+  &--center {
+    text-align: center;
+  }
+}

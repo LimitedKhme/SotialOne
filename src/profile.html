@@ -1,0 +1,55 @@
+---
+layout: default
+title: Profile
+---
+
+<h2 class="page_title">Профиль</h2>
+
+<form class="form" action="/" method="post">
+  <div class="cabinet">
+    <div class="cabinet_form">
+      <div class="form_groop form_groop--md">
+        <input
+          class="form_control"
+          type="text"
+          placeholder="Ваше имя"
+          value="Александр Хмель"
+        />
+        <span class="form_line"></span>
+      </div>
+
+      <div class="form_groop form_groop--md">
+        <input
+          class="form_control"
+          type="email"
+          placeholder="Email"
+          value="alex.provo@mail.com"
+        />
+        <span class="form_line"></span>
+      </div>
+
+      <div class="form_groop form_groop--md">
+        <input class="form_control" type="passwor" placeholder="Новый пароль" />
+        <span class="form_line"></span>
+      </div>
+
+      <div class="form_groop form_groop--md">
+        <input
+          class="form_control"
+          type="password"
+          placeholder="Подтвердите пароль"
+        />
+        <span class="form_line"></span>
+      </div>
+    </div>
+
+    <div class="cabinet_avatar">
+      <img src="https://placehold.it/150" alt="" />
+      <label class="cabinet_file">
+        <input type="file" />
+        выбрать аватар
+      </label>
+    </div>
+  </div>
+  <button class="btn btn--blue btn--sm btn--rounded">Сохранить</button>
+</form>

@@ -1,0 +1,47 @@
+.cabinet {
+  display: flex;
+
+  @include breakpoint($mobile_bp) {
+    flex-direction: column;
+  }
+}
+
+.cabinet_form {
+  width: 34rem;
+
+  @include breakpoint($mobile_bp) {
+    width: 25rem;
+    order: 2;
+  }
+}
+
+.cabinet_avatar {
+  flex-grow: 1;
+  padding-left: 11rem;
+
+  img {
+    margin-bottom: 1.1rem;
+  }
+
+  @include breakpoint($mobile_bp) {
+    order: 1;
+    padding-left: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+.cabinet_file {
+  display: block;
+  color: $blue;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1.4rem;
+
+  input {
+    display: none;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

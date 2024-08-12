@@ -1,0 +1,81 @@
+.nav {
+  &--mobile {
+    display: none;
+  }
+
+  @include breakpoint($tablet_bp) {
+    display: none;
+
+    &--mobile {
+      display: block;
+      margin: 3rem 0;
+    }
+  }
+}
+
+.nav_list {
+  display: flex;
+
+  @include breakpoint($tablet_bp) {
+    flex-direction: column;
+  }
+}
+
+.nav_item {
+  position: relative;
+  &:hover {
+    .nav_link {
+      background-color: $blue;
+    }
+
+    > .subnav {
+      display: block;
+    }
+  }
+
+  @include breakpoint($tablet_bp) {
+    &:hover {
+      .nav_link {
+        background: none;
+      }
+    }
+  }
+
+}
+
+.nav_link {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  font-size: 1.3rem;
+  color: $white;
+
+  padding: 1.2rem 1.5rem;
+  transition: background-color 0.2s linear;
+
+  &.has-subnav {
+    padding-right: 3.5rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      margin-top: 2px;
+      border-style: solid;
+      border-width: 6px 5px 0 5px;
+      border-color: $white transparent transparent transparent;
+      position: absolute;
+      top: 50%;
+      right: 1.3rem;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include breakpoint($tablet_bp) {
+    padding-left: 0;
+    padding-right: 0;
+
+    font-size: 1.6rem;
+  }
+}
